@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "863938139499",
+    "project_id": "ridereapplication",
+    "storage_bucket": "ridereapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863938139499:android:6823a27e5f08c49369a82e",
+        "android_client_info": {
+          "package_name": "com.example.rideredirverapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqhHm4c-hOw4H1ZeUsYupMxUWRpN85sok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraText"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".ProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <!--                <TextView-->
+            <!--                    android:layout_width="120dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:text="ProfileInfo"-->
+            <!--                    android:layout_gravity="center_horizontal"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:layout_marginTop="2dp"-->
+            <!--                    android:textSize="23sp"-->
+            <!--                    android:textStyle="bold"/>-->
+            <!--                <Button-->
+            <!--                    android:id="@+id/button1"-->
+            <!--                    android:layout_width="100dp"-->
+            <!--                    android:layout_height="40dp"-->
+            <!--                    android:layout_marginStart="70dp"-->
+            <!--                    android:backgroundTint="@color/white"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:text="Help"-->
+            <!--                    android:textSize="15sp"-->
+            <!--                    android:textStyle="bold"/>-->
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.714">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/arrow"-->
+            <!--            android:layout_width="60dp"-->
+            <!--            android:layout_height="50dp"-->
+            <!--            android:layout_weight="0.0"-->
+            <!--            android:src="@drawable/google" />-->
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/baseline_person_24"
+                android:onClick="profilePicUpload"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="5dp" />
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/edit"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:backgroundTint="@color/white"-->
+            <!--        android:drawableLeft="@drawable/baseline_edit_24"/>-->
+
+            <TextView
+                android:id="@+id/firstnametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="First name"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter first name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/Lastnametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Last name"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter last name"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/dateofbirthtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Date of Birth"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateTextInputLayout"
+                android:layout_marginTop="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateofbirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="date"
+                    android:drawableEnd="@drawable/baseline_calendar_month_24"
+                    android:hint="DD/MM/YYYY"
+                    android:onClick="showDatePicker"
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:clickable="true"
+
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/emailtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Email ID"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="Enter your emailID"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:text="Gender"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="40dp">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:text=" Male"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:text=" Female"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/profileBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:text="Submit"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="fill_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".ProfileActivity">-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingRight="10dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints">-->
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            android:layout_weight="0"-->
+<!--            tools:ignore="MissingConstraints">-->
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:id="@+id/toolbarProfile"-->
+<!--                android:background="@color/black"-->
+<!--                app:navigationIcon="@drawable/baseline_arrow_back_24"-->
+<!--                app:popupTheme="@style/AppTheme.PopupOverlay"-->
+<!--                android:layout_height="?attr/actionBarSize">-->
+<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="120dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="ProfileInfo"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginTop="2dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="23sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textStyle="bold"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <Button&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/button1"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="100dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginStart="70dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:backgroundTint="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginTop="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Help"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="15sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textStyle="bold"/>&ndash;&gt;-->
+<!--            </androidx.appcompat.widget.Toolbar>-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/arrow"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="60dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="0.0"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@drawable/google" />&ndash;&gt;-->
+
+
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/profile_image"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:src="@drawable/baseline_person_24"-->
+<!--        android:layout_marginStart="140dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:civ_border_width="5dp"-->
+<!--        android:onClick="profilePicUpload"-->
+<!--        app:civ_border_color="#FF000000"/>-->
+
+<!--    &lt;!&ndash;    <EditText&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:id="@+id/edit"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:backgroundTint="@color/white"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:drawableLeft="@drawable/baseline_edit_24"/>&ndash;&gt;-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/firstnametxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="First name"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="0dp">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:id="@+id/firstname"-->
+<!--            android:padding="10dp"-->
+
+<!--            android:hint="Enter first name"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="HardcodedText" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--    <TextView-->
+<!--        android:id="@+id/Lastnametxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Last name"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold" />-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="0dp">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/lastname"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:hint="Enter last name"-->
+<!--            android:inputType="textPersonName"-->
+
+<!--            android:padding="10dp"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="HardcodedText,TouchTargetSizeCheck" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--    <TextView-->
+<!--        android:id="@+id/dateofbirthtxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Date of Birth"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold" />-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="0dp">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/dateofbirth"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:text="DD/MM/YYYY"-->
+<!--            android:inputType="textEmailAddress"-->
+
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:padding="10dp"-->
+<!--            tools:ignore="TouchTargetSizeCheck" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--    <TextView-->
+<!--        android:id="@+id/emailtxt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Email ID"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold" />-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="0dp">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/email"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:text="Enter your emailID"-->
+
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="TouchTargetSizeCheck" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/gender"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:text="Gender"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="bold"/>-->
+<!--    <RadioGroup-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="46dp"-->
+<!--        android:id="@+id/radioGroup"-->
+<!--        android:orientation="horizontal">-->
+<!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/linear"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="380dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:orientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            tools:ignore="MissingConstraints">&ndash;&gt;-->
+<!--            <RadioButton-->
+<!--                android:id="@+id/male"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:text=" Male"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                tools:ignore="HardcodedText" />-->
+<!--            <RadioButton-->
+<!--                android:id="@+id/female"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:text=" Female"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                tools:ignore="HardcodedText" />-->
+<!--&lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+<!--    </RadioGroup>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/profileBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Submit"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginStart="120dp"/>-->
+
+
+
+<!--    </LinearLayout>-->
+<!--</ScrollView>-->

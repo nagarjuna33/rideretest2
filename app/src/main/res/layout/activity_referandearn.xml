@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReferandEarnActivity">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#EBE4D1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.0"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:layout_weight="0.5"
+            android:text="Refer &amp; Earn "
+            android:textColor="#E55604"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="ObsoleteLayoutParam" />
+    </LinearLayout>
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/REFFERAL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txt2"
+                        android:layout_width="380dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="100dp"
+                        android:textStyle="bold"
+                        android:text="SHARE YOUR REFFERAL CODE:"
+                        android:textSize="25sp"
+                        tools:ignore="HardcodedText" />
+                    <TextView
+                        android:id="@+id/txt3"
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:text="xxxxxxxxxxxxxxx"
+                        android:textSize="25sp"
+                        android:layout_marginStart="80dp"
+                        tools:ignore="HardcodedText" />
+                    <TextView
+                        android:id="@+id/txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="250dp"
+                        android:textStyle="bold"
+                        android:text="Refer your friend and earn Rs.xx per referal"
+                        android:textSize="25sp"
+                        android:layout_marginStart="15dp"
+                        tools:ignore="HardcodedText" />
+                    <Button
+                        android:id="@+id/shareButton"
+                        android:layout_width="300dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="Invite Friends"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:backgroundTint="#FFCC70"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/EARNINGS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+</LinearLayout>
